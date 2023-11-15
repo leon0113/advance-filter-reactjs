@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-     <Nav/>
-     <Products/>
-     <Recommended/>
+      <Nav />
+      <Recommended />
+      <Products />
     </>
   )
 }
