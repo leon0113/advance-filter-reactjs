@@ -6,7 +6,7 @@ import Price from './Price/Price';
 import './Sidebar.css';
 
 
-function Sidebar(handleChange: any) {
+function Sidebar({ handleChange }: any) {
     return (
         <>
             <section className="sidebar">

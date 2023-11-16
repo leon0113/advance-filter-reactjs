@@ -5,14 +5,14 @@ interface props {
   value: string | number,
   title: string,
   name: string,
-  // color: string
+  color?: string
 }
 
-function Input({ handleChange, value, title, name, }: props) {
+function Input({ handleChange, value, title, name, color }: props) {
   return (
     <label className='sidebar-label-container'>
       <input onChange={handleChange} type="radio" value={value} name={name} />
-      <span className='checkmark'></span>{title}
+      <span className='checkmark' style={{ backgroundColor: color }}></span>{title}
     </label>
   )
 }

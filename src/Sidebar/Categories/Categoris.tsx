@@ -27,19 +27,19 @@ function Categoris({ handleChange }: prop) {
         />
         <Input
           handleChange={handleChange}
-          value="Flats"
+          value="flats"
           title='Flats'
           name='test'
         />
         <Input
           handleChange={handleChange}
-          value="Sandals"
+          value="sandals"
           title='Sandals'
           name='test'
         />
         <Input
           handleChange={handleChange}
-          value="Heels"
+          value="heels"
           title='Heels'
           name='test'
         />

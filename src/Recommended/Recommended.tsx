@@ -1,17 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import Buttons from '../components/Buttons';
 import './Recommended.css';
 
-function Recommended() {
+interface prop {
+  handleClick: any
+}
+
+
+function Recommended({ handleClick }: prop) {
   return (
     <>
       <div>
         <h2 className="recommended-title ">Recommended</h2>
         <div className="recommended-flex">
-          <button className="btns">All Products</button>
-          <button className="btns">Nike</button>
-          <button className="btns">Adidas</button>
-          <button className="btns">Puma</button>
-          <button className="btns">Vans</button>
-
+          <Buttons OnClickHandler={handleClick} value='' title='All Products' />
+          <Buttons OnClickHandler={handleClick} value='Nike' title='Nike' />
+          <Buttons OnClickHandler={handleClick} value='Adidas' title='Adidas' />
+          <Buttons OnClickHandler={handleClick} value='Puma' title='Puma' />
+          <Buttons OnClickHandler={handleClick} value='Vans' title='Vans' />
         </div>
       </div>
     </>

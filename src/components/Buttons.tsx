@@ -1,7 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-function Buttons() {
+interface props {
+  OnClickHandler: any,
+  value: string,
+  title: string
+}
+
+function Buttons({ OnClickHandler, value, title }: props) {
   return (
-    <div>Buttons</div>
+    <button onClick={OnClickHandler} value={value} className="btns">{title}</button>
   )
 }
 

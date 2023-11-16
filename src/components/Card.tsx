@@ -12,22 +12,22 @@ interface CardProps {
   // ... other props if applicable
 }
 
-function Card(props: CardProps) {
+function Card({ img, title, star, reviews, prevPrice, newPrice }: CardProps) {
   return (
     <section className="card">
-      <img src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg" alt="shoe" className='card-img' />
+      <img src={img} alt="shoe" className='card-img' />
       <div className="card-details">
-        <h3 className='card-title'>Shoe</h3>
+        <h3 className='card-title'>{title}</h3>
         <section className="card-reviews">
           <AiFillStar className="rating-star" />
           <AiFillStar className="rating-star" />
           <AiFillStar className="rating-star" />
           <AiFillStar className="rating-star" />
-          <span className='total-reviews'>4</span>
+          <span className='total-reviews'> {reviews}</span>
         </section>
         <section className="card-price">
           <div className="price">
-            <del>$2000</del> $1323
+            <del>{prevPrice}</del> {newPrice}
           </div>
           <div className="bag">
             <CiShoppingCart className="bag-icon" />
