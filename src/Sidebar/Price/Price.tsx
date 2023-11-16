@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Input from '../../components/Input';
+import Radio from '../../components/Radio';
 import './Price.css';
 interface prop {
   handleChange: any
@@ -16,25 +16,25 @@ function Price({ handleChange }: prop) {
           <span className='checkmark'></span>All
         </label>
 
-        <Input
+        <Radio
           handleChange={handleChange}
           value={50}
           title='$0-$50'
           name='test2'
         />
-        <Input
+        <Radio
           handleChange={handleChange}
           value={100}
           title='$50-$100'
           name='test2'
         />
-        <Input
+        <Radio
           handleChange={handleChange}
           value={150}
           title='$100-$150'
           name='test2'
         />
-        <Input
+        <Radio
           handleChange={handleChange}
           value={200}
           title='$150+'

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Input from '../../components/Input';
+import Radio from '../../components/Radio';
 import './Colors.css';
 
 interface prop {
@@ -9,33 +9,33 @@ interface prop {
 function Colors({ handleChange }: prop) {
   return (
     <div>
-      <h2 className="sidebar-title price-title">Colors</h2>
+      <h2 className="sidebar-title color-title">Colors</h2>
       <label className='sidebar-label-container'>
-        <input onChange={handleChange} value="" name='test' type="radio" />
+        <input onChange={handleChange} value="" name='test1' type="radio" />
         <span className='checkmark all'></span>All
       </label>
-      <Input
+      <Radio
         handleChange={handleChange}
         value="black"
         title='Black'
         name='test1'
         color='black'
       />
-      <Input
+      <Radio
         handleChange={handleChange}
         value="blue"
         title='Blue'
         name='test1'
         color='blue'
       />
-      <Input
+      <Radio
         handleChange={handleChange}
         value="red"
         title='Red'
         name='test1'
         color='red'
       />
-      <Input
+      <Radio
         handleChange={handleChange}
         value="green"
         title='Green'

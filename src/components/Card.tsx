@@ -12,7 +12,7 @@ interface CardProps {
   // ... other props if applicable
 }
 
-function Card({ img, title, star, reviews, prevPrice, newPrice }: CardProps) {
+function Card({ img, title, reviews, prevPrice, newPrice }: CardProps) {
   return (
     <section className="card">
       <img src={img} alt="shoe" className='card-img' />

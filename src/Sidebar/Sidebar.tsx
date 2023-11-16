@@ -11,7 +11,7 @@ function Sidebar({ handleChange }: any) {
         <>
             <section className="sidebar">
                 <div className="logo-container">
-                    <h1>🚗</h1>
+                    <h1>Filters🧷</h1>
                 </div>
 
                 <Categoris handleChange={handleChange} />

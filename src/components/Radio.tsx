@@ -8,7 +8,7 @@ interface props {
   color?: string
 }
 
-function Input({ handleChange, value, title, name, color }: props) {
+function Radio({ handleChange, value, title, name, color }: props) {
   return (
     <label className='sidebar-label-container'>
       <input onChange={handleChange} type="radio" value={value} name={name} />
@@ -17,4 +17,4 @@ function Input({ handleChange, value, title, name, color }: props) {
   )
 }
 
-export default Input
+export default Radio

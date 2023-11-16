@@ -45,13 +45,12 @@ function App() {
   }
 
   //-------------Button filters----------------
-  const handleClick = (e: { target: { value: SetStateAction<null> } }) => {
-    setSelectedCategory(e.target.value);
-  }
+  // const handleClick = (e: { target: { value: SetStateAction<null> } }) => {
+  //   setSelectedCategory(e.target.value);
+  // }
 
   function filteredData(products: any, selected: any, query: string) {
     let filteredProducts: Product[] = products;
-
     // Filtering Input Items
     if (query) {
       filteredProducts = filteredItems;
@@ -59,9 +58,8 @@ function App() {
 
     //Selected Filter
     if (selected) {
-      filteredProducts = filteredProducts.filter(({ category, color, company, newPrice, title }) => category === selected || color === selected || company === selected || newPrice === selected || title === selected)
+      filteredProducts = filteredProducts.filter((product) => product.category === selected || product.color === selected || product.company === selected || product.newPrice === selected || product.title === selected)
     }
-
 
     return filteredProducts.map(({ img, title, star, reviews, prevPrice, newPrice }) => (
       <Card
@@ -82,7 +80,7 @@ function App() {
     <>
       <Sidebar handleChange={handleChange} />
       <Nav query={query} handleInputChange={handleInputChange} />
-      <Recommended handleClick={handleClick} />
+      <Recommended handleChange={handleChange} />
       <Products result={result} />
     </>
   )
